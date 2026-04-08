@@ -3,99 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Younes Bahiani | Engineering Portfolio</title>
+    <title>Younes Bahiani Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
-        body { font-family: 'Space Grotesk', sans-serif; }
-        .tech-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        body { font-family: sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .card { background: #1e293b; border-radius: 12px; padding: 24px; border: 1px solid #334155; }
+        .tag { background: #3b82f6; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
     </style>
 </head>
-<body class="bg-[#0f172a] text-slate-200 leading-relaxed">
+<body class="max-w-4xl mx-auto px-6 py-12">
 
-    <nav class="p-6 max-w-6xl mx-auto flex justify-between items-center border-b border-slate-800">
-        <span class="text-xl font-bold tracking-widest text-white underline decoration-blue-500 decoration-4">YB</span>
-        <div class="space-x-8 text-xs uppercase tracking-widest font-bold">
-            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-            <a href="#about" class="hover:text-blue-400 transition">About</a>
-            <a href="https://github.com/Younesbahi" target="_blank" class="text-blue-500 border border-blue-500 px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition">GitHub Profile</a>
-        </div>
-    </nav>
-
-    <section class="max-w-5xl mx-auto pt-20 pb-12 px-6">
-        <p class="text-blue-400 font-mono mb-2">// St. Francis Xavier High School | Ottawa</p>
-        <h1 class="text-7xl font-bold text-white mb-6">Younes Bahiani</h1>
-        <p class="text-xl text-slate-400 max-w-3xl">
-            Aspiring <span class="text-white">Hardware & Systems Engineer</span>. I bridge the gap between physical mechanics and digital logic through PCB design, embedded firmware, and mechanical experimentation.
+    <header class="mb-16">
+        <h1 class="text-5xl font-bold mb-4">Younes Bahiani</h1>
+        <p class="text-blue-400 text-lg mb-4">Electrical / Mechanical Engineering Applicant | Electronic Hobbyist</p>
+        <p class="text-slate-400 leading-relaxed">
+            I’m a student at STFX in Ottawa. I’m mostly self-taught when it comes to electronics and coding. I like building things to see how they work. When I'm not at the desk, I'm doing Karate or looking into how cars and mechanical systems are put together.
         </p>
-    </section>
+    </header>
 
-    <main id="projects" class="max-w-5xl mx-auto px-6 py-12">
-        <h2 class="text-sm font-mono text-slate-500 uppercase tracking-[0.3em] mb-10">Selected Works</h2>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="tech-card bg-slate-900 border border-slate-800 rounded-xl p-8 transition duration-300">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">Keyboard-V1</h3>
-                    <span class="text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 px-2 py-1 rounded">C++ / QMK</span>
-                </div>
-                <p class="text-slate-400 text-sm mb-6">
-                    A full-scale custom mechanical keyboard. Developed the switch matrix, routed the PCB trace logic, and managed the firmware integration using C++.
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://github.com/Younesbahi/Keyboard-V1" class="text-xs font-bold text-white border-b-2 border-blue-500 pb-1 hover:text-blue-400 transition">View Repository</a>
-                </div>
-            </div>
+    <section id="projects" class="space-y-8">
+        <h2 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6">Stuff I've Built</h2>
 
-            <div class="tech-card bg-slate-900 border border-slate-800 rounded-xl p-8 transition duration-300">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-bold text-white">Keychain-PCB-v1</h3>
-                    <span class="text-[10px] bg-purple-500/20 text-purple-400 border border-purple-500/30 px-2 py-1 rounded">PCB Design</span>
+        <div class="card">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/3 bg-slate-700 rounded-lg flex items-center justify-center min-h-[150px]">
+                    <img src="keyboard-photo.jpg" alt="Keyboard Project" class="rounded-lg object-cover w-full h-full">
                 </div>
-                <p class="text-slate-400 text-sm mb-6">
-                    A compact hardware project focused on silk-screen aesthetics and PCB manufacturing workflows. Demonstrates proficiency in Gerber file generation and component layout.
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://github.com/Younesbahi/Keychain-PCB-v1" class="text-xs font-bold text-white border-b-2 border-purple-500 pb-1 hover:text-purple-400 transition">View Repository</a>
+                <div class="md:w-2/3">
+                    <span class="tag">Main Project</span>
+                    <h3 class="text-xl font-bold mt-2">Custom Mechanical Keyboard</h3>
+                    <p class="text-slate-400 mt-2 text-sm">
+                        I designed the PCB layout and used Python for some of the logic. I had to learn how to route traces and handle electronics assembly myself. It's not perfect, but it works.
+                    </p>
+                    <a href="https://github.com/Younesbahi/Keyboard-V1" class="text-blue-400 text-sm mt-4 inline-block font-bold hover:underline">See the Files &rarr;</a>
                 </div>
             </div>
         </div>
-    </main>
 
-    <section id="about" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-800">
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="md:col-span-1">
-                <h2 class="text-xl font-bold text-white mb-4">The Build Mindset</h2>
-                <p class="text-slate-400 text-sm italic">
-                    "From the discipline of Karate to the complexity of a car engine, I am driven by the mechanics of how things function under pressure."
-                </p>
-            </div>
-            
-            <div class="md:col-span-2 grid grid-cols-2 gap-8 text-sm">
-                <div>
-                    <h4 class="text-blue-400 font-bold mb-2 uppercase tracking-tighter">Mechanical Skills</h4>
-                    <ul class="text-slate-500 space-y-1">
-                        <li>Automotive Systems</li>
-                        <li>PCB Routing</li>
-                        <li>Soldering & Assembly</li>
-                        <li>Kinematics (Karate)</li>
-                    </ul>
+        <div class="card">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/3 bg-slate-700 rounded-lg flex items-center justify-center min-h-[150px]">
+                    <img src="keychain-photo.jpg" alt="Keychain Project" class="rounded-lg object-cover w-full h-full">
                 </div>
-                <div>
-                    <h4 class="text-blue-400 font-bold mb-2 uppercase tracking-tighter">Software Skills</h4>
-                    <ul class="text-slate-500 space-y-1">
-                        <li>C++ / Embedded</li>
-                        <li>Git / Version Control</li>
-                        <li>Gerber Manufacturing</li>
-                        <li>Logic Optimization</li>
-                    </ul>
+                <div class="md:w-2/3">
+                    <h3 class="text-xl font-bold">Keychain PCB</h3>
+                    <p class="text-slate-400 mt-2 text-sm">
+                        A smaller project to practice PCB design and getting things manufactured. Focus was on layout and getting the hardware right.
+                    </p>
+                    <a href="https://github.com/Younesbahi/Keychain-PCB-v1" class="text-blue-400 text-sm mt-4 inline-block font-bold hover:underline">View Repo &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/3 bg-slate-700 rounded-lg flex items-center justify-center">
+                   <span class="text-slate-500 italic text-xs">No Image Yet</span>
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-xl font-bold">Grade 9 Wind Tunnel</h3>
+                    <p class="text-slate-400 mt-2 text-sm">
+                        I built a wind tunnel to test aerodynamics. This was one of my first big engineering-style projects where I had to measure data and see how air moves over different shapes.
+                    </p>
+                    <span class="text-slate-500 text-xs mt-4 block italic">GitHub coming soon</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="text-center py-10 text-slate-700 text-[10px] tracking-[0.5em] uppercase">
-        Ottawa // Engineering // 2026
+    <section class="mt-16 grid md:grid-cols-2 gap-12">
+        <div>
+            <h3 class="text-xl font-bold mb-4">Skills</h3>
+            <ul class="text-slate-400 space-y-2 text-sm">
+                <li><strong class="text-white">Hardware:</strong> PCB Design, Soldering, Electronics Prototyping</li>
+                <li><strong class="text-white">Programming:</strong> Python (Basics), C++ (Firmware), Self-Taught learner</li>
+                <li><strong class="text-white">Other:</strong> Mechanical Systems, Aerodynamics (Wind Tunnel)</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-4">Interests</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Martial Arts (Karate), Working on cars/mechanics, and tinkering with electronics. I prefer the hands-on side of engineering.
+            </p>
+        </div>
+    </section>
+
+    <footer class="mt-20 border-t border-slate-800 pt-8 text-center text-slate-500 text-xs">
+        <p>Younes Bahiani | Ottawa, ON</p>
     </footer>
 
 </body>
